@@ -32,8 +32,8 @@ if [[ "${USE_OVSDB_ETCD}" = "yes" ]]; then
     export PATH=$PATH:$HOME/bin
 
     pushd $GOPATH/src
-    git clone https://github.com/IBM/ovsdb-etcd.git
-    pushd ovsdb-etcd
+    git clone -b timeLogs  --single-branch https://github.com/roytman/ovsdb-etcd-1.git
+    pushd ovsdb-etcd-1
     make build
 
     cp pkg/cmd/server/server /root/ovsdb_etcd_server
