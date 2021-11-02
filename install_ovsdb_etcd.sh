@@ -33,7 +33,7 @@ if [[ "${USE_OVSDB_ETCD}" = "yes" ]]; then
 
     pushd $GOPATH/src
     git clone https://github.com/roytman/ovsdb-etcd-1
-    pushd ovsdb-etcd
+    pushd ovsdb-etcd-1
     git checkout timeStamps3
     make build
 
