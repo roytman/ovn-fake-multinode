@@ -34,7 +34,7 @@ if [[ "${USE_OVSDB_ETCD}" = "yes" ]]; then
     pushd $GOPATH/src
     git clone https://github.com/roytman/ovsdb-etcd-1
     pushd ovsdb-etcd
-    git checkout timeStamps
+    git checkout timeStamps3
     make build
 
     cp pkg/cmd/server/server /root/ovsdb_etcd_server
