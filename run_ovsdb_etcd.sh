@@ -17,11 +17,11 @@ set -o errexit
 
 # OVSDB-etcd variables
 ovsdb_etcd_members=${OVSDB_ETCD_MEMBERS:-"localhost:2479"}
-ovsdb_etcd_max_txn_ops=${OVSDB_ETCD_MAX_TXN_OPS:-"102400"}                        # etcd default is 128
-ovsdb_etcd_max_request_bytes=${OVSDB_ETCD_MAX_REQUEST_BYTES:-"157286400"}       # 150 MByte
+ovsdb_etcd_max_txn_ops=${OVSDB_ETCD_MAX_TXN_OPS:-"300000"}                        # etcd default is 128
+ovsdb_etcd_max_request_bytes=${OVSDB_ETCD_MAX_REQUEST_BYTES:-"1073741824"}       # 1 GByte
 ovsdb_etcd_warning_apply_duration=${OVSDB_ETCD_WARNING_APPLY_DURATION:-"1s"}    # etcd default is 100ms
 ovsdb_etcd_election_timeout=${OVSDB_ETCD_ELECTION_TIMEOUT:-"1000"}              # etcd default
-ovsdb_etcd_quota_backend_bytes=${OVSDB_ETCD_QUOTA_BACKEND_BYTES:-"8589934592"}  # 8 GByte
+ovsdb_etcd_quota_backend_bytes=${OVSDB_ETCD_QUOTA_BACKEND_BYTES:-"17179869184"}  # 16 GByte
 # OVN_NB_PORT - ovn north db port (default 6641)
 ovn_nb_port=${OVN_NB_PORT:-6641}
 # OVN_SB_PORT - ovn south db port (default 6642)
